@@ -2,6 +2,8 @@ cmake_minimum_required (VERSION 3.0)
 
 project (CG_Hometasks)
 
+set(CMAKE_CXX_STANDARD 17)
+
 find_package(OpenGL REQUIRED)
 
 set(ALL_LIBS
@@ -36,7 +38,7 @@ add_executable(task2
         practice/2/task.cpp
         common/shader.cpp
         common/shader.hpp
-        )
+         2nd_hw/OGLstrike.cpp 2nd_hw/OGLstrike.hpp 2nd_hw/task.cpp)
 target_link_libraries(task2
         ${ALL_LIBS}
         )
@@ -58,6 +60,20 @@ add_executable(task4
         common/shader.hpp
         )
 target_link_libraries(task4
+        ${ALL_LIBS}
+        )
+
+# hw2
+add_executable(hw2
+        2nd_hw/task.cpp
+        common/shader.cpp
+        common/shader.hpp
+        common/texture.cpp
+        common/texture.hpp
+        2nd_hw/OGLstrike.hpp
+        2nd_hw/OGLstrike.cpp
+        2nd_hw/Camera.cpp 2nd_hw/Camera.hpp 2nd_hw/Unit.cpp 2nd_hw/Unit.hpp 2nd_hw/models.hpp 2nd_hw/BaseUnit.cpp 2nd_hw/BaseUnit.hpp)
+target_link_libraries(hw2
         ${ALL_LIBS}
         )
 
